@@ -1,0 +1,1 @@
+o único objetivo desse projeto é testar o framework Fiber
