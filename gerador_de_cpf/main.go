@@ -22,15 +22,19 @@ func getCpf(ammount string) string {
 
 	response := ""
 
-	parameterInt, err := strconv.Atoi(ammount)
+	ammountInt, err := strconv.Atoi(ammount)
 	if err != nil {
 		return "invalid ammount, use a integer"
 	}
 
-	for i := 1; i <= parameterInt; i++ {
-		response += "a"
+	for i := 1; i <= ammountInt; i++ {
+		response += createCpf()
 	}
 
 	return response
 }
 
+func createCpf() string {
+
+	return ""
+}
