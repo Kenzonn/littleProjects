@@ -1,11 +1,12 @@
 package main
 
 import (
-	"github.com/gofiber/fiber/v2"
 	"strconv"
+
+	"github.com/gofiber/fiber/v2"
 )
 
-func main() { 
+func main() {
 	app := fiber.New()
 
 	app.Get("/:ammount?", func(c *fiber.Ctx) error {
@@ -15,7 +16,7 @@ func main() {
 		return c.SendString(getCpf(c.Params("ammount")))
 	})
 
-    	app.Listen(":3000")
+	app.Listen(":3000")
 }
 
 func getCpf(ammount string) string {
@@ -35,6 +36,7 @@ func getCpf(ammount string) string {
 }
 
 func createCpf() string {
+	cpf := ""
 
-	return ""
+	return cpf
 }
